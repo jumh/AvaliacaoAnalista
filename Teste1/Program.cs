@@ -11,7 +11,13 @@ namespace Teste1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Boa sorte!");
+            InputManager inputManager = new();
+            DuplicateRemover duplicateRemover = new();
+
+            var userInput = inputManager.GetValidUserInput();
+            var result = duplicateRemover.RemoveConsecutiveDuplicates(userInput);
+
+            Console.WriteLine("Resultado: " + result);
         }
     }
 }

@@ -12,7 +12,12 @@ namespace Teste2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Boa sorte!");
+            FibonacciGenerator fibonacciGenerator = new();
+
+            var userInput = InputManager.GetValidUserInput();
+            var result = fibonacciGenerator.GenerateSequence(userInput);
+
+            Console.WriteLine("Resultado: " + result);
         }
     }
 }
