@@ -5,13 +5,38 @@
     Exemplo: AAABCCDDD -> Retorno : ABCD
  */
 
-namespace Teste1
+using System.Text;
+
+namespace Teste1;
+
+internal class Program
 {
-    internal class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        Console.WriteLine("Digite uma string alfanumérica:");
+        var input = Console.ReadLine();
+
+        var result = RemoveDuplicates(input);
+
+        Console.WriteLine($"Resultado: {result}");
+    }
+
+    static string RemoveDuplicates(string input)
+    {
+        if (string.IsNullOrEmpty(input)) return input;
+
+        var previousChar = '\0';
+        var output = new StringBuilder();
+
+        foreach (var currentChar in input)
         {
-            Console.WriteLine("Boa sorte!");
+            if (currentChar != previousChar)
+            {
+                output.Append(currentChar);
+                previousChar = currentChar;
+            }
         }
+
+        return output.ToString();
     }
 }
