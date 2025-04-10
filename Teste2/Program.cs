@@ -12,7 +12,50 @@ namespace Teste2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Boa sorte!");
+
+            Console.WriteLine("Digite um número inteiro entre 1 e 19:");
+            var input = Console.ReadLine();
+
+
+            while (!ValidateInput(input))
+            {
+                input = Console.ReadLine();
+            }
+
+            GenerateFibonacciSequence(int.Parse(input));
+        }
+
+
+        static bool ValidateInput(string? input)
+        {
+            if (string.IsNullOrEmpty(input) || !int.TryParse(input, out int number))
+            {
+                Console.WriteLine("Você deve digitar um número inteiro entre 1 e 19.");
+                return false;
+            }
+            if (number < 1 || number > 19)
+            {
+                Console.WriteLine("O número deve ser maior que 0 e menor que 20.");
+                return false;
+            }
+
+            return true;
+        }
+
+        static void GenerateFibonacciSequence(int sequenceLength)
+        {
+            int fA = 1, fB = 1, fC;
+
+            Console.WriteLine("Sequência de Fibonacci:");
+
+            for (int i = 0; i < sequenceLength; i++)
+            {
+                Console.Write(fA + ",");
+
+                fC = fA + fB;
+                fA = fB;
+                fB = fC;
+            }
         }
     }
 }
