@@ -6,13 +6,46 @@
     Obs: A seguência de Fibonacci segue o padrão 1,1,2,3,5,8 e assim por diante, sendo o próximo número a soma do último número com o seu anterior.
 */
 
+
 namespace Teste2
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Boa sorte!");
+            Console.WriteLine("Digite um número inteiro entre 1 e 19:");
+            string input = Console.ReadLine();
+
+            if (!int.TryParse(input, out int quantidade) || quantidade <= 0 || quantidade >= 20)
+            {
+                Console.WriteLine("Entrada inválida! Digite um número inteiro maior que 0 e menor que 20.");
+                return;
+            }
+
+            Console.WriteLine($"Sequência de Fibonacci com {quantidade} números:");
+            GerarFibonacci(quantidade);
+        }
+
+        static void GerarFibonacci(int quantidade)
+        {
+            int primeiro = 1, segundo = 1;
+
+            if (quantidade == 1)
+            {
+                Console.WriteLine(primeiro);
+                return;
+            }
+
+            Console.Write($"{primeiro}, {segundo}");
+
+            for (int i = 2; i < quantidade; i++)
+            {
+                int proximo = primeiro + segundo;
+                Console.Write($", {proximo}");
+                primeiro = segundo;
+                segundo = proximo;
+            }
+            Console.WriteLine(); 
         }
     }
 }
