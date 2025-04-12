@@ -12,7 +12,29 @@ namespace Teste2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Boa sorte!");
+            Console.WriteLine("Digite um número: ");
+            var ehInteiro = Int32.TryParse(Console.ReadLine(), out var numero);
+
+            if (numero <= 0 || numero >= 20 || !ehInteiro)
+            {
+                Console.WriteLine("Digite um número inteiro, positivo, maior que 0 e menor que 20.");
+                return;
+            }
+            
+            for (int i = 1; i < numero; i++)
+            {
+                Console.Write($"{GetFibonacci(i)},");
+            }
+            // pra deixar mais organizado
+            Console.WriteLine($"{GetFibonacci(numero)}");
+
+        }
+
+        static int GetFibonacci(int numero)
+        {
+            if (numero <= 1)
+                return numero;
+            return GetFibonacci(numero - 1) + GetFibonacci(numero - 2);
         }
     }
 }
