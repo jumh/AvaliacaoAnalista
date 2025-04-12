@@ -12,7 +12,37 @@ namespace Teste2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Boa sorte!");
+            Console.WriteLine("Insira um número para geração da sequência de Fibonacci (entre 1 e 20)");
+            try
+            {
+                var numeroDeRepeticoes = int.Parse(Console.ReadLine());
+                
+                Console.WriteLine(GerarSequenciaDeFibonacci(numeroDeRepeticoes));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Valor inválido");
+            }
+        }
+
+        public static string GerarSequenciaDeFibonacci(int numeroDeRepeticoes)
+        {
+            if (numeroDeRepeticoes < 1 || numeroDeRepeticoes > 20)
+                return "É necessário informar um número entre 1 e 20";
+            
+            var resultado = new List<int>();
+            var contador = 1;
+            while (contador <= numeroDeRepeticoes)
+            {
+                if(contador <= 2)
+                    resultado.Add(1);
+                else 
+                    resultado.Add(resultado[contador - 2] + resultado[contador - 3]);   
+                
+                contador++;
+            }   
+            
+            return string.Join(",", resultado);
         }
     }
 }
