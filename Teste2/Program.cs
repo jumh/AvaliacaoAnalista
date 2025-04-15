@@ -12,7 +12,44 @@ namespace Teste2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Boa sorte!");
+            int quantidade = SolicitarEntrada();
+            CalcularSequenciaFibonacci(quantidade);
+        }
+
+        static int SolicitarEntrada()
+        {
+            Console.Write("Digite um número inteiro entre 1 e 19: ");
+            string entrada = Console.ReadLine();
+
+            ValidarEntrada(entrada, out int numeroValido);
+
+            return numeroValido;
+        }
+
+        static void ValidarEntrada(string entrada, out int numero)
+        {
+            bool ehNumero = int.TryParse(entrada, out numero);
+
+            if (!ehNumero || numero <= 0 || numero >= 20)
+            {
+                Console.WriteLine("Erro: Como o valor não atende aos requisitos o programa será encerrado.");
+                Environment.Exit(1);
+            }
+        }
+
+        static void CalcularSequenciaFibonacci(int quantidade)
+        {
+            Console.WriteLine("Sequência de Fibonacci:");
+
+            int anterior = 1, atual = 1;
+
+            for (int i = 0; i < quantidade; i++)
+            {
+                Console.Write(i == 0 ? $"{anterior}" : $", {anterior}");
+                int proximo = anterior + atual;
+                anterior = atual;
+                atual = proximo;
+            }
         }
     }
 }
