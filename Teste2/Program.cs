@@ -12,7 +12,34 @@ namespace Teste2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Boa sorte!");
+            Console.Write("Digite um número inteiro entre 1 e 19: ");
+            var input = Console.ReadLine();
+
+            if (!int.TryParse(input, out int quantidade) || quantidade < 1 || quantidade >= 20)
+            {
+                Console.WriteLine("Entrada inválida. Por favor, digite um número inteiro positivo entre 1 e 19.");
+                return;
+            }
+
+            var sequencia = GerarFibonacci(quantidade);
+            Console.WriteLine("Sequência de Fibonacci:");
+            Console.WriteLine(string.Join(", ", sequencia));
+        }
+
+        private static List<int> GerarFibonacci(int n)
+        {
+            var resultado = new List<int>();
+
+            if (n >= 1) resultado.Add(1);
+            if (n >= 2) resultado.Add(1);
+
+            for (int i = 2; i < n; i++)
+            {
+                int proximo = resultado[i - 1] + resultado[i - 2];
+                resultado.Add(proximo);
+            }
+
+            return resultado;
         }
     }
 }
