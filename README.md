@@ -205,4 +205,4 @@ Acesso rápido a arquivos internos sem sair do chat
 Melhora na agilidade de atendimento e suporte aos colaboradores
 
 
-Entre outros...
+Entre outros..
