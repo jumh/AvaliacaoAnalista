@@ -27,3 +27,17 @@ C:\Users\m.vinicius\Dev\Repo\GitHubPessoal\AvaliacaoAnalista\Teste1\obj\Debug\ne
 C:\Users\m.vinicius\Dev\Repo\GitHubPessoal\AvaliacaoAnalista\Teste1\obj\Debug\net8.0\Teste1.pdb
 C:\Users\m.vinicius\Dev\Repo\GitHubPessoal\AvaliacaoAnalista\Teste1\obj\Debug\net8.0\Teste1.genruntimeconfig.cache
 C:\Users\m.vinicius\Dev\Repo\GitHubPessoal\AvaliacaoAnalista\Teste1\obj\Debug\net8.0\ref\Teste1.dll
+C:\Users\Alvaro\Desktop\AvaliacaoAnalista-main\Teste1\bin\Debug\net8.0\Teste1.exe
+C:\Users\Alvaro\Desktop\AvaliacaoAnalista-main\Teste1\bin\Debug\net8.0\Teste1.deps.json
+C:\Users\Alvaro\Desktop\AvaliacaoAnalista-main\Teste1\bin\Debug\net8.0\Teste1.runtimeconfig.json
+C:\Users\Alvaro\Desktop\AvaliacaoAnalista-main\Teste1\bin\Debug\net8.0\Teste1.dll
+C:\Users\Alvaro\Desktop\AvaliacaoAnalista-main\Teste1\bin\Debug\net8.0\Teste1.pdb
+C:\Users\Alvaro\Desktop\AvaliacaoAnalista-main\Teste1\obj\Debug\net8.0\Teste1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alvaro\Desktop\AvaliacaoAnalista-main\Teste1\obj\Debug\net8.0\Teste1.AssemblyInfoInputs.cache
+C:\Users\Alvaro\Desktop\AvaliacaoAnalista-main\Teste1\obj\Debug\net8.0\Teste1.AssemblyInfo.cs
+C:\Users\Alvaro\Desktop\AvaliacaoAnalista-main\Teste1\obj\Debug\net8.0\Teste1.csproj.CoreCompileInputs.cache
+C:\Users\Alvaro\Desktop\AvaliacaoAnalista-main\Teste1\obj\Debug\net8.0\Teste1.dll
+C:\Users\Alvaro\Desktop\AvaliacaoAnalista-main\Teste1\obj\Debug\net8.0\refint\Teste1.dll
+C:\Users\Alvaro\Desktop\AvaliacaoAnalista-main\Teste1\obj\Debug\net8.0\Teste1.pdb
+C:\Users\Alvaro\Desktop\AvaliacaoAnalista-main\Teste1\obj\Debug\net8.0\Teste1.genruntimeconfig.cache
+C:\Users\Alvaro\Desktop\AvaliacaoAnalista-main\Teste1\obj\Debug\net8.0\ref\Teste1.dll
