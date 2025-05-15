@@ -5,13 +5,48 @@
     Exemplo: AAABCCDDD -> Retorno : ABCD
  */
 
-namespace Teste1
+using System.Text;
+
+namespace Teste1;
+
+public class Program
 {
-    internal class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        Console.Write("Digite um texto alfanumérico para remover duplicatas consecutivas: ");
+
+        string userInputText = Console.ReadLine() ?? string.Empty;
+
+        if (string.IsNullOrWhiteSpace(userInputText))
         {
-            Console.WriteLine("Boa sorte!");
+            Console.WriteLine("Sem entrada de dados");
         }
+        else
+        {
+            string formattedInputValue = RemoveDuplicateLetters(userInputText);
+            Console.WriteLine("Resultado: " + formattedInputValue);
+        }
+    }
+
+    public static string RemoveDuplicateLetters(string input)
+    {
+        if (string.IsNullOrEmpty(input))
+            return input;
+
+        var finalResult = new StringBuilder();
+        char lastLetter = input[0];
+
+        finalResult.Append(lastLetter);
+
+        for (int i = 1; i < input.Length; i++)
+        {
+            if (input[i] != lastLetter)
+            {
+                finalResult.Append(input[i]);
+                lastLetter = input[i];
+            }
+        }
+
+        return finalResult.ToString();
     }
 }
