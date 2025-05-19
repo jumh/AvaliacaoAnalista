@@ -5,13 +5,37 @@
     Exemplo: AAABCCDDD -> Retorno : ABCD
  */
 
-namespace Teste1
-{
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Boa sorte!");
+using System;
+
+namespace Teste1 {
+    internal class Program {
+        static void Main(string[] args) {
+            Console.Write("Digite uma string alfanumérica: ");
+            string input = Console.ReadLine();
+
+            if (string.IsNullOrEmpty(input)) {
+                Console.WriteLine("Entrada inválida.");
+                return;
+            }
+
+            string resultado = RemoverDuplicadosProximos(input);
+            Console.WriteLine($"Resultado: {resultado}");
+        }
+
+        static string RemoverDuplicadosProximos(string texto) {
+            if (string.IsNullOrEmpty(texto)) return texto;
+
+            char anterior = texto[0];
+            string resultado = anterior.ToString();
+
+            for (int i = 1; i < texto.Length; i++) {
+                if (texto[i] != anterior) {
+                    resultado += texto[i];
+                    anterior = texto[i];
+                }
+            }
+
+            return resultado;
         }
     }
 }
