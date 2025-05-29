@@ -12,6 +12,13 @@ namespace Teste1
         static void Main(string[] args)
         {
             Console.WriteLine("Boa sorte!");
+
+            Console.Write("Digite um texto:");
+            string entrada = Console.ReadLine();
+            string output = new string(entrada.Distinct().ToArray());
+            Console.WriteLine("Resultado: " + output);
+            
+            
         }
     }
 }

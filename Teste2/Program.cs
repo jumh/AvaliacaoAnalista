@@ -13,6 +13,28 @@ namespace Teste2
         static void Main(string[] args)
         {
             Console.WriteLine("Boa sorte!");
+
+            int numero;
+            do
+            {
+                Console.Write("Digite um número entre 0 e 20: ");
+            } while (!int.TryParse(Console.ReadLine(), out numero) || numero < 0 || numero > 20);
+
+            int primeiro = 1, segundo = 1;
+
+            Console.Write("Sequência de Fibonacci: ");
+
+            for (int i = 0; i < numero; i++)
+            {
+                Console.Write(primeiro + " ");
+
+                int proximo = primeiro + segundo;
+                primeiro = segundo;
+                segundo = proximo;
+            }
+
+
+
         }
     }
 }

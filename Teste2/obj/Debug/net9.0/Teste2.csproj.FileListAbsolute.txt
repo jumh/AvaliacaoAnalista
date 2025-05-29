@@ -1,0 +1,15 @@
+C:\AvaliacaoAnalista\Teste2\bin\Debug\net9.0\Teste2.exe
+C:\AvaliacaoAnalista\Teste2\bin\Debug\net9.0\Teste2.deps.json
+C:\AvaliacaoAnalista\Teste2\bin\Debug\net9.0\Teste2.runtimeconfig.json
+C:\AvaliacaoAnalista\Teste2\bin\Debug\net9.0\Teste2.dll
+C:\AvaliacaoAnalista\Teste2\bin\Debug\net9.0\Teste2.pdb
+C:\AvaliacaoAnalista\Teste2\obj\Debug\net9.0\Teste2.GeneratedMSBuildEditorConfig.editorconfig
+C:\AvaliacaoAnalista\Teste2\obj\Debug\net9.0\Teste2.AssemblyInfoInputs.cache
+C:\AvaliacaoAnalista\Teste2\obj\Debug\net9.0\Teste2.AssemblyInfo.cs
+C:\AvaliacaoAnalista\Teste2\obj\Debug\net9.0\Teste2.csproj.CoreCompileInputs.cache
+C:\AvaliacaoAnalista\Teste2\obj\Debug\net9.0\Teste2.sourcelink.json
+C:\AvaliacaoAnalista\Teste2\obj\Debug\net9.0\Teste2.dll
+C:\AvaliacaoAnalista\Teste2\obj\Debug\net9.0\refint\Teste2.dll
+C:\AvaliacaoAnalista\Teste2\obj\Debug\net9.0\Teste2.pdb
+C:\AvaliacaoAnalista\Teste2\obj\Debug\net9.0\Teste2.genruntimeconfig.cache
+C:\AvaliacaoAnalista\Teste2\obj\Debug\net9.0\ref\Teste2.dll
