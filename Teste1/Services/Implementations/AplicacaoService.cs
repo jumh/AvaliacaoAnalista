@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging;
 
 using Teste1.Services.Interfaces;
 
@@ -17,13 +17,13 @@ public class AplicacaoService(
     {
         _logger?.LogInformation("Iniciando aplicação...");
 
-        bool continuar = true;
+        var continuar = true;
 
         while (continuar)
         {
             Console.WriteLine("\n=== VALIDADOR DE TEXTO ===");
             Console.WriteLine("Digite um texto para validar:");
-            string? entrada = Console.ReadLine();
+            var entrada = Console.ReadLine();
 
             if (string.IsNullOrEmpty(entrada))
             {
@@ -38,15 +38,15 @@ public class AplicacaoService(
                 validador.DefinirTexto(entrada);
             }
 
-            bool ehValido = _validadorTexto.EhValido();
+            var ehValido = _validadorTexto.EhValido();
             Console.WriteLine($"\nTexto é válido (apenas letras e números): {ehValido}");
 
-            string textoSemDuplicatas = _validadorTexto.RemoverCaracteresDuplicadosEmSequencia();
+            var textoSemDuplicatas = _validadorTexto.RemoverCaracteresDuplicadosEmSequencia();
             Console.WriteLine($"Texto original: {entrada}");
             Console.WriteLine($"Texto sem duplicatas adjacentes: {textoSemDuplicatas}");
 
             Console.WriteLine("\nDeseja testar outro texto? (S/N):");
-            string? resposta = Console.ReadLine();
+            var resposta = Console.ReadLine();
 
             continuar =
                 !string.IsNullOrEmpty(resposta)
