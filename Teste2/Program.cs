@@ -10,9 +10,33 @@ namespace Teste2
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("Boa sorte!");
+            Console.WriteLine("Digite um número inteiro positivo entre 1 e 19:");
+            if (int.TryParse(Console.ReadLine(), out int number) && number > 0 && number < 20)
+            {
+                Console.WriteLine("Sequência de Fibonacci:");
+                GenerateFibonacci(number);
+            }
+            else
+            {
+                Console.WriteLine("Número inválido. Tente novamente com um valor entre 1 e 19.");
+            }
+        }
+
+        static void GenerateFibonacci(int count)
+        {
+            int previous = 1, current = 1;
+
+            for (int i = 0; i < count; i++)
+            {
+                Console.Write(previous + (i < count - 1 ? ", " : ""));
+                int next = previous + current;
+                previous = current;
+                current = next;
+            }
+
+            Console.WriteLine();
         }
     }
 }
