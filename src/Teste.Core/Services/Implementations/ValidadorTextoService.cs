@@ -1,8 +1,8 @@
 using System.Text;
 
-using Teste1.Services.Interfaces;
+using Teste.Core.Services.Interfaces;
 
-namespace Teste1.Services.Implementations;
+namespace Teste.Core.Services.Implementations;
 
 public class ValidadorTextoService : IValidadorTextoService
 {

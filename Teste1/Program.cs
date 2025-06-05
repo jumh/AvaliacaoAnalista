@@ -6,48 +6,34 @@
  */
 
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Console;
 
-using Teste1.Services.Implementations;
-using Teste1.Services.Interfaces;
+using Teste.Core.Extensions;
+using Teste.Core.Services.Interfaces;
 
 namespace Teste1;
 
-public class Program
+internal class Program
 {
-    public static async Task Main(string[] args)
+    public static async Task Main()
     {
-        var services = new ServiceCollection();
-
-        services.AddScoped<IValidadorTextoService, ValidadorTextoService>();
-        services.AddScoped<IAplicacaoService, AplicacaoService>();
-
-        services.AddLogging(builder =>
-        {
-            builder.AddSimpleConsole(options =>
-            {
-                options.IncludeScopes = false;
-                options.SingleLine = true;
-                options.TimestampFormat = "HH:mm:ss ";
-                options.ColorBehavior = LoggerColorBehavior.Enabled;
-            });
-        });
-
+        var services = new ServiceCollection().AddMinhaInfraestrutura();
         var serviceProvider = services.BuildServiceProvider();
 
         try
         {
-            var aplicacao = serviceProvider.GetRequiredService<IAplicacaoService>();
+            var aplicacao = serviceProvider.GetRequiredService<IAplicacaoTest1Service>();
             await aplicacao.ExecutarAsync();
         }
-        catch (Exception exception)
+        catch (Exception ex)
         {
-            Console.WriteLine($"Erro na aplicação: {exception.Message}");
+            Console.WriteLine($"Erro: {ex.Message}");
         }
         finally
         {
-            serviceProvider.Dispose();
+            if (serviceProvider is IDisposable disposable)
+            {
+                disposable.Dispose();
+            }
         }
     }
 }

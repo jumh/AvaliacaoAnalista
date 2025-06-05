@@ -1,4 +1,4 @@
-﻿/*
+/*
  Você deve implementar nessa aplicação console uma lógica que satisfaça os seguintes requisitos:
     1 - A aplicação deve solicitar ao usuário que ele digite um número.
     2 - A aplicação deve ler essa entrada e garantir que foi digitado um número inteiro, positivo, maior que 0 e menor que 20.
@@ -6,13 +6,32 @@
     Obs: A seguência de Fibonacci segue o padrão 1,1,2,3,5,8 e assim por diante, sendo o próximo número a soma do último número com o seu anterior.
 */
 
-namespace Teste2
+using Microsoft.Extensions.DependencyInjection;
+
+using Teste.Core.Extensions;
+using Teste.Core.Services.Interfaces;
+
+namespace Teste2;
+
+public class Program
 {
-    internal class Program
+    public static async Task Main()
     {
-        static void Main(string[] args)
+        var services = new ServiceCollection().AddMinhaInfraestrutura();
+        var serviceProvider = services.BuildServiceProvider();
+
+        try
         {
-            Console.WriteLine("Boa sorte!");
+            var aplicacao = serviceProvider.GetRequiredService<IAplicacaoTest2Service>();
+            await aplicacao.ExecutarAsync();
+        }
+        catch (Exception exception)
+        {
+            Console.WriteLine($"Erro na aplicação: {exception.Message}");
+        }
+        finally
+        {
+            serviceProvider.Dispose();
         }
     }
 }

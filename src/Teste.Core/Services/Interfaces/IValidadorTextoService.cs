@@ -1,4 +1,4 @@
-﻿namespace Teste1.Services.Interfaces;
+namespace Teste.Core.Services.Interfaces;
 
 public interface IValidadorTextoService
 {
