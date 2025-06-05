@@ -12,7 +12,42 @@ namespace Teste2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Boa sorte!");
+            int quantidade = ObterQuantidadeValida();
+            ExibirSequenciaFibonacci(quantidade);
+        }
+
+        static int ObterQuantidadeValida()
+        {
+            int quantidade;
+
+            while (true)
+            {
+                Console.Write("Digite um número inteiro positivo entre 1 e 19 para gerar a sequência de Fibonacci: ");
+                string entrada = Console.ReadLine();
+
+                if (int.TryParse(entrada, out quantidade) && quantidade > 0 && quantidade < 20)
+                {
+                    return quantidade;
+                }
+
+                Console.WriteLine("Entrada inválida. Por favor, digite um número inteiro entre 1 e 19.\n");
+            }
+        }
+
+        static void ExibirSequenciaFibonacci(int quantidade)
+        {
+            Console.WriteLine($"\nSequência de Fibonacci com {quantidade} elemento(s):");
+
+            int a = 1, b = 1;
+
+            for (int i = 0; i < quantidade; i++)
+            {
+                Console.Write(a + (i < quantidade - 1 ? ", " : "\n"));
+
+                int temp = a;
+                a = b;
+                b = temp + b;
+            }
         }
     }
 }
