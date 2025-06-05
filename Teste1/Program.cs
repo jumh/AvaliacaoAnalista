@@ -11,7 +11,21 @@ namespace Teste1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Boa sorte!");
+            Console.WriteLine("Digite um texto alfanumérico:");
+
+            var response = Console.ReadLine();
+
+            var letraAnterior = string.Empty;
+            var textoLimpo = string.Empty;
+            for(var i = 0; i < response.Count(); i++)
+            {
+                if (response[i].ToString() != letraAnterior)
+                    textoLimpo += response[i].ToString();
+
+                letraAnterior = response[i].ToString();
+            }
+
+            Console.WriteLine(textoLimpo);
         }
     }
 }
