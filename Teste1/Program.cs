@@ -11,7 +11,37 @@ namespace Teste1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Boa sorte!");
+            Console.Write("Digite uma string alfanumérica: ");
+            string entrada = Console.ReadLine();
+
+            string resultado = RemoverDuplicatasConsecutivas(entrada);
+
+            Console.WriteLine($"\nResultado: {resultado}");
+            Console.WriteLine("\nPressione qualquer tecla para sair...");
+            Console.ReadKey();
+        }
+
+        /// <summary>
+        /// Remove caracteres duplicados consecutivos de uma string.
+        /// </summary>
+        /// <param name="entrada">String original</param>
+        /// <returns>String sem duplicatas consecutivas</returns>
+        static string RemoverDuplicatasConsecutivas(string entrada)
+        {
+            if (string.IsNullOrEmpty(entrada))
+                return string.Empty;
+
+            var resultado = entrada[0].ToString();
+
+            for (int i = 1; i < entrada.Length; i++)
+            {
+                if (entrada[i] != entrada[i - 1])
+                {
+                    resultado += entrada[i];
+                }
+            }
+
+            return resultado;
         }
     }
 }

@@ -1,98 +1,178 @@
-# Desafio
+# Questionário Técnico – .NET, Arquitetura e DevOps
 
-- Este repositório possui 2 desafios em .Net, o desafio está dentro do _Program.cs_ de cada projeto.
-- Para enviar a resposta, abra uma Pull Request para este repositório.
+## Cite 6 fatores do Twelve-Factor App e explique cada um deles
 
-# Questionário
+1. **Codebase**  
+   Uma única base de código versionada por app. Pode haver múltiplos deploys, mas a base de código é única.
 
-1. Cite 6 fatores do Twelve-Factor App e explique cada um deles.
+2. **Config**  
+   Configurações devem estar fora do código, geralmente em variáveis de ambiente. Isso facilita a troca entre ambientes (dev, staging, produção).
 
-**Resposta:**
+3. **Backing Services**  
+   Trate banco de dados, cache, filas etc. como serviços externos substituíveis, sem acoplamento forte com a aplicação.
 
-2. Quais são as principais camadas no desenvolvimento de um software?
+4. **Build, Release, Run**  
+   Separação clara entre _build_ (compilar o código), _release_ (associar configuração) e _run_ (executar).
 
-**Resposta:**
+5. **Processes**  
+   A aplicação deve ser stateless (sem estado persistente entre execuções). Qualquer estado deve ser externo (cache, banco etc).
 
+6. **Logs**  
+   Logs devem ser emitidos como _streams_ de eventos. Não salvar logs em arquivos locais. Usar ferramentas externas para agregação e análise.
 
-3. Diferencie Arquitetura SOA X Arquitetura microserviços.
+---
 
-**Resposta:**
+## Quais são as principais camadas no desenvolvimento de um software?
 
+- **Apresentação (UI)**: Interface com o usuário.
+- **Aplicação**: Orquestra os casos de uso.
+- **Domínio**: Contém as regras de negócio.
+- **Infraestrutura**: Integrações externas (banco, APIs etc).
+- **Persistência**: Comunicação com o banco de dados (ex: EF Core).
 
-4. Qual é o objetivo de um API Management na arquitetura de serviços distribuídos? Cite vantagens e desvantagens.
+---
 
-**Resposta:**
+## Diferencie Arquitetura SOA x Arquitetura de Microserviços
 
+- **SOA**: Serviços robustos, integrados por um barramento (ESB), com uso de XML e contratos compartilhados.
+- **Microserviços**: Serviços pequenos, independentes, geralmente comunicando por REST/gRPC, focados em escalabilidade e manutenção isolada.
 
-5. Qual a diferença entre uma Struct e uma Class?
+---
 
-**Resposta:**
+## Qual o objetivo de um API Management?
 
+Gerenciar APIs com segurança, controle de versão e monitoramento.
 
-6. Explique a grande diferença entre .NET e .NET CORE.
+- **Vantagens**: Segurança, analytics, controle de acesso, rate limit.
+- **Desvantagens**: Custo e curva de aprendizado.
+- **Exemplo**: Azure API Management.
 
-**Resposta:**
+---
 
+## Qual a diferença entre uma Struct e uma Class?
 
-7. Quais as principais diferenças entre REST e GRPC?
+- **Struct**: Tipo valor (stack), sem herança, mais leve, ideal para tipos simples.
+- **Class**: Tipo referência (heap), suporta herança/polimorfismo, ideal para lógica complexa.
 
-**Resposta:**
+---
 
+## Diferença entre .NET e .NET Core
 
-8. Explique como funciona um gerenciamento de rotas de uma SPA.
+- **.NET Framework**: Antigo, apenas para Windows.
+- **.NET Core** (hoje apenas .NET): Cross-platform, moderno, mais leve e com melhor performance.
 
-**Resposta:**
+---
 
+## REST x gRPC
 
-9. Falando sobre DevOps, comente o que conhece sobre.
+- **REST**: Usa HTTP + JSON, amigável para web/navegadores, simples.
+- **gRPC**: Usa HTTP/2 + Protobuf, muito mais performático, ideal para comunicação entre serviços.
 
-**Resposta:**
+---
 
+## Como funciona o gerenciamento de rotas em uma SPA?
 
-10. Explique sobre um método agile.
+Usa **roteamento client-side** com bibliotecas como React Router. A troca de rotas não recarrega a página, apenas muda o componente renderizado dinamicamente.
 
-**Resposta:**
+---
 
+## DevOps – o que você conhece?
 
-11. Comente sobre CI e CD e algumas ferramentas do dia a dia.
+Integra desenvolvimento e operações com automação. Ferramentas como:
 
-**Resposta:**
+- GitHub Actions
+- Docker
+- Kubernetes
+- Prometheus
 
+Visa entregas frequentes, seguras e automatizadas.
 
-12. Qual a diferença entre Docker e Containers.
+---
 
-**Resposta:**
+## Método Ágil
 
+**Scrum**: Método mais comum. Sprints curtas (geralmente 2 semanas), backlog priorizado, reuniões diárias e feedback contínuo.
 
-13. Qual a diferença entre Kubernetes e Openshift?
+---
 
-**Resposta:**
+## CI/CD – Integração e Entrega Contínua
 
+- **CI (Continuous Integration)**: Build e testes automáticos a cada commit.
+- **CD (Continuous Delivery/Deployment)**: Entrega/deploy automático ou sob aprovação.
 
-14. Quais as vantagens e desvantagens sobre API e quais preocupações devemos ter quando escolhemos essa abordagem?
+**Ferramentas**: GitHub Actions, Azure Pipelines, Jenkins.
 
-**Resposta:**
+---
 
+## Docker x Containers
 
-15. Como conseguimos garantir um nível de segurança satisfatório no uso de APIS?
+- **Container**: Conceito de empacotar uma aplicação com suas dependências em um ambiente isolado.
+- **Docker**: Ferramenta/plataforma que gerencia a criação e execução de containers.
 
-**Resposta:**
+---
 
+## Kubernetes x OpenShift
 
-16. Para que serve uma arquitetura de mensagerias?
+- **Kubernetes**: Orquestrador de containers open-source.
+- **OpenShift**: Plataforma baseada no Kubernetes com funcionalidades enterprise (UI, CI/CD, RBAC etc).
 
-**Resposta:**
+---
 
+## Vantagens e Desvantagens de APIs
 
-17. Explique a estratégia SAGA em arquitetura de microservice.
+- **Vantagens**: Integração fácil, escalabilidade, reutilização de serviços.
+- **Desvantagens**: Latência, segurança, versionamento.
+- **Preocupações**: Autenticação, validação, throttling, logging, rate limit.
 
-**Resposta:**
+---
 
+## Segurança em APIs
 
-18. Descreva o seu entendimento sobre GitOps utilizando Kubernetes.
+Para garantir segurança:
 
-**Resposta:**
+- Usar HTTPS
+- Autenticação JWT / OAuth2
+- Validação de entrada
+- CORS
+- Logs centralizados
+- Rate limiting
 
-19. Descreva detalhadamente algum case de sucesso em que você atuou diretamente no desenvolvimento para solução de algum problema, cite tecnologias e os desafios enfrentados.
+---
 
-**Resposta:**
+## Para que serve uma arquitetura de mensageria?
+
+Permite **comunicação assíncrona** entre serviços, reduz acoplamento e melhora escalabilidade.
+
+**Ferramentas**: RabbitMQ, Kafka, Azure Service Bus.
+
+---
+
+## Estratégia SAGA em microserviços
+
+Controla **transações distribuídas** com consistência eventual.
+
+- **Orquestrada**: Um serviço coordena.
+- **Coreografada**: Cada serviço reage a eventos.
+
+---
+
+## GitOps com Kubernetes
+
+**Git como fonte de verdade** para a configuração de clusters.
+
+Com ferramentas como **ArgoCD** e **Flux**, qualquer mudança no Git é automaticamente aplicada no cluster, com controle de auditoria.
+
+---
+
+## Case de Sucesso
+
+Trabalhei na migração de um monólito para microserviços utilizando:
+
+- **.NET 6**, **EF Core**, **RabbitMQ**
+- Contêineres com **Docker**
+- Orquestração via **Kubernetes**
+- **CI/CD** com GitHub Actions
+
+**Desafio**: manter consistência dos dados e deploy contínuo sem downtime. O ganho foi em escalabilidade, confiabilidade e velocidade de entrega.
+
+---
