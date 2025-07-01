@@ -12,7 +12,48 @@ namespace Teste2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Boa sorte!");
+            int num = VerifiyNum();
+            int[] fibonacciSeq = GenerateFibonacciSequence(num);
+
+            ShowSequence(fibonacciSeq);
+            Console.ReadKey();
+        }
+
+        static int VerifiyNum()
+        {
+            int num;
+            do
+            {
+                Console.Write("Digite um número inteiro positivo entre 1 e 20: ");
+                string? input = Console.ReadLine();
+                if (!int.TryParse(input, out num) || num <= 0 || num >= 20)
+                {
+                    Console.WriteLine("Número inválido. Tente novamente.");
+                }
+            } while (num <= 0 || num >= 20);
+            return num;
+        }
+
+        static int[] GenerateFibonacciSequence(int num)
+        {
+            int[] fibonacci = new int[num];
+            if (num >= 1) fibonacci[0] = 1;
+            if (num >= 2) fibonacci[1] = 1;
+            for (int i = 2; i < num; i++)
+            {
+                fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+            }
+            return fibonacci;
+        }
+
+        static void ShowSequence(int[] fibonacciSeq)
+        {
+            Console.WriteLine("Sequência de Fibonacci:");
+            foreach (int number in fibonacciSeq)
+            {
+                Console.Write(number + " ");
+            }
+            Console.WriteLine();
         }
     }
 }
