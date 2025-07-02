@@ -11,7 +11,26 @@ namespace Teste1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Boa sorte!");
+            List<char> response = new List<char>();
+            string stringAlfanumerica = string.Empty;
+
+            Console.WriteLine("Entre com uma string alfanumérica: ");
+            stringAlfanumerica = Console.ReadLine();
+
+            // Console.WriteLine("O usuário digitou: " + stringAlfanumerica);
+
+            response.Add(stringAlfanumerica[0]);
+
+            for(int i = 1; i < stringAlfanumerica.Length; i++)
+            {
+                if(stringAlfanumerica[i] != stringAlfanumerica[i - 1])
+                {
+                    response.Add(stringAlfanumerica[i]);
+                }
+            }
+
+            Console.WriteLine(response.ToArray());
+            // Console.WriteLine("Boa sorte!");
         }
     }
 }

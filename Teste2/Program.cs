@@ -12,7 +12,45 @@ namespace Teste2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Boa sorte!");
+            int aux = 1;
+            int lastDigit = 1;
+            int lastDigitAux = 0;
+            int number = 0;
+
+            Console.WriteLine("Entre com um número inteiro: ");
+            try
+            {
+                number = int.Parse(Console.ReadLine());
+            } catch(FormatException ex)
+            {
+                Console.WriteLine("Digite apenas números");
+                Console.WriteLine(ex.Message);
+            }
+
+            if (!(number > 0) || !(number < 20))
+            {
+                Console.WriteLine("O número deve ser maior que 0 e menor que 20.");
+                return;
+            }
+
+            for(int i = 0; i < (number -1); i++)
+            {
+                if(i == 0)
+                {
+                    Console.WriteLine(aux);
+                    Console.WriteLine(lastDigit);
+                } 
+                else
+                {
+
+                    lastDigitAux = aux + lastDigit;
+                    Console.WriteLine(lastDigitAux);
+                    lastDigit = aux;
+                    aux = lastDigitAux;
+                }
+            }
+
+            // Console.WriteLine("Usuário digitou o número: " + number);
         }
     }
 }
