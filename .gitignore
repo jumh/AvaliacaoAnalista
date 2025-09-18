@@ -1,0 +1,68 @@
+# Compilação
+bin/
+obj/
+out/
+
+# Usuário / IDE
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio
+.vs/
+
+# Rider
+.idea/
+
+# Cache / Logs
+*.log
+*.tlog
+*.vspscc
+*.vssscc
+*.ncrunch*
+_ReSharper*/
+*.DotSettings.user
+
+# Build Results
+*.dll
+*.exe
+*.pdb
+*.cache
+*.mdb
+
+# Publish
+*.Publish.xml
+publish/
+
+# Pacotes NuGet
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+project.lock.json
+
+# Configuração local
+appsettings.Development.json
+appsettings.Local.json
+
+# Docker
+*.pid
+*.seed
+docker-compose.override.yml
+
+# Testes
+TestResult*/
+*.coverage
+*.coveragexml
+*.testsettings
+*.trx
+
+# Sistema Operacional
+.DS_Store
+Thumbs.db
+
+# Outros
+node_modules/
+wwwroot/lib/

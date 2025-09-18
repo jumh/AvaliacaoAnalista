@@ -5,13 +5,39 @@
     Exemplo: AAABCCDDD -> Retorno : ABCD
  */
 
+using Teste1.Interfaces;
+using Teste1.Implements;
+
 namespace Teste1
 {
     internal class Program
     {
+        private readonly IInputReader _inputReader;
+        private readonly IStringProcessor _processor;
+        private readonly IOutputWriter _outputWriter;
+
+        public Program(IInputReader inputReader, IStringProcessor processor, IOutputWriter outputWriter)
+        {
+            _inputReader = inputReader;
+            _processor = processor;
+            _outputWriter = outputWriter;
+        }
+
+        private void Run()
+        {
+            var input = _inputReader.Read();
+            var output = _processor.Process(input);
+            _outputWriter.Write(output);
+        }
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Boa sorte!");
+            var app = new Program(
+                new ConsoleInputReader(),
+                new AdjacentDuplicateRemover(),
+                new ConsoleOutputWriter());
+
+            app.Run();
         }
     }
 }
