@@ -8,11 +8,47 @@
 
 namespace Teste2
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Boa sorte!");
+            Console.WriteLine();
+            Console.Write("Digite um número inteiro entre 1 e 19: ");
+            string? input = Console.ReadLine();
+
+            if (!int.TryParse(input, out int n))
+            {
+                Console.WriteLine("Valor inválido: não é um número inteiro.");
+                return;
+            }
+
+            if (n <= 0 || n >= 20)
+            {
+                Console.WriteLine("Valor inválido: deve ser maior que 0 e menor que 20.");
+                return;
+            }
+
+            var fib = GerarFibonacci(n);
+            Console.WriteLine("Sequência de Fibonacci com " + n + " termos:");
+            Console.WriteLine(string.Join(", ", fib));
+        }
+
+        static int[] GerarFibonacci(int n)
+        {
+            int[] seq = new int[n];
+
+            if (n >= 1)
+                seq[0] = 1;
+
+            if (n >= 2)
+                seq[1] = 1;
+
+            for (int i = 2; i < n; i++)
+            {
+                seq[i] = seq[i - 1] + seq[i - 2];
+            }
+
+            return seq;
         }
     }
 }
