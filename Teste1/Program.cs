@@ -11,7 +11,24 @@ namespace Teste1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Boa sorte!");
+            Console.WriteLine("Digite uma string alfanumérica (um texto):");
+            string texto = Console.ReadLine();
+            string novoTexto = "Resposta: ";
+
+            for (int i = 0; i < texto.Length; i++)
+            {
+                // Aqui se for o último, só acata a letra e termina.
+                if (i == texto.Length - 1)
+                {
+                    novoTexto += texto[i];
+                    continue;
+                }
+
+                if (texto[i] != texto[i + 1]) novoTexto += texto[i];
+            }
+
+            Console.WriteLine(novoTexto);
+            Console.ReadKey();
         }
     }
 }
