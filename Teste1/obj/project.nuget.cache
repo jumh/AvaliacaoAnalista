@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "oA87AUNK/d8=",
+  "dgSpecHash": "dG5zT1Ivxzo=",
   "success": true,
-  "projectFilePath": "C:\\Users\\m.vinicius\\Dev\\Repo\\GitHubPessoal\\AvaliacaoAnalista\\Teste1\\Teste1.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Projetos\\koopere\\AvaliacaoAnalista\\Teste1\\Teste1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\desktop\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.20\\microsoft.windowsdesktop.app.ref.8.0.20.nupkg.sha512",
+    "C:\\Users\\desktop\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.20\\microsoft.netcore.app.ref.8.0.20.nupkg.sha512",
+    "C:\\Users\\desktop\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.20\\microsoft.aspnetcore.app.ref.8.0.20.nupkg.sha512",
+    "C:\\Users\\desktop\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.20\\microsoft.netcore.app.host.win-x64.8.0.20.nupkg.sha512"
+  ],
   "logs": []
 }
