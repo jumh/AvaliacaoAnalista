@@ -220,3 +220,13 @@ Pra garantir o processamento no tempo requisitado pela área de negócio (o cál
 
 Para garantir a integridade da solução, executamos também diversos testes de carga simulando dados esperados no ambiente produtivo, para ter certeza de que a infraestrutura das aplicações e da base de dados estava pronta para suportar a demanda necessária.
 
+-------------------
+
+Também fui responsável pelo desenvolvimento do produto PaymentHub da ASC Solutions, processando milhares de transações mensais via Pix, cartão, boleto e Bolepix, com seleção dinâmica da adquirente de menor taxa em tempo real.
+
+Uma API desenvolvida em .NET 6 com uma aplicação backoffice (Angular ~16) estruturada para receber solicitações de transação de outros produtos internos, com uso de Redis como banco de cache, AzureSQL como banco relacional, Azure Service Bus como serviços de mensageria
+para processamentos assíncronos, Azure Pipelines para o CI/CD.
+
+A aplicação possuía integração com grandes adquirentes como Cielo, Pagseguro, Inter, Aarin, com algumas delas requisitando configurações
+específicas de SSL para handshake em cada requisição. A aplicação também possuia integração com datadog para monitoramento e acompanhamento de lastros de cada transação, facilitando o apoio da equipe de N2, além do próprio backoffice que possuia diversas features como estorno, saque, reprocessamento, e lastro das transações.
+
