@@ -10,9 +10,62 @@ namespace Teste2
 {
     internal class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Boa sorte!");
+            Console.WriteLine("=== Gerador de Sequência de Fibonacci Simples ===");
+
+            int n;
+            const int MIN = 1;
+            const int MAX = 19;
+
+            while (true)
+            {
+                Console.Write($"\nDigite um número inteiro (entre {MIN + 1} e {MAX}): ");
+                string input = Console.ReadLine();
+
+                if (!int.TryParse(input, out n))
+                {
+                    Console.WriteLine("Erro: O valor digitado não é um número inteiro válido.");
+                    continue;
+                }
+
+                if (n <= MIN || n > MAX)
+                {
+                    Console.WriteLine($"Erro: O número deve ser maior que {MIN} e menor que {MAX + 1}.");
+                    continue;
+                }
+
+                break;
+            }
+
+
+            
+
+            // Exibe o resultado
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"Sequência de Fibonacci: {string.Join(", ", RetornarSequenciaFibonacci(n))}");
+            Console.ResetColor();
+
+            Console.WriteLine("\nPressione qualquer tecla para sair...");
+            Console.ReadKey();
+        }
+
+        public static List<int> RetornarSequenciaFibonacci(int n)
+        {
+            var sequencia = new List<int>();
+            int anterior = 1;
+            int atual = 1;
+
+            for (int i = 1; i <= n; i++)
+            {
+                sequencia.Add(anterior);
+
+                int proximo = anterior + atual;
+
+                anterior = atual;
+                atual = proximo;
+            }
+            return sequencia;
         }
     }
 }
