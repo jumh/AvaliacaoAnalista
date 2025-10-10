@@ -1,0 +1,15 @@
+/home/renanmoraes/projects/supero/AvaliacaoAnalista/Teste2/bin/Debug/net8.0/Teste2
+/home/renanmoraes/projects/supero/AvaliacaoAnalista/Teste2/bin/Debug/net8.0/Teste2.deps.json
+/home/renanmoraes/projects/supero/AvaliacaoAnalista/Teste2/bin/Debug/net8.0/Teste2.runtimeconfig.json
+/home/renanmoraes/projects/supero/AvaliacaoAnalista/Teste2/bin/Debug/net8.0/Teste2.dll
+/home/renanmoraes/projects/supero/AvaliacaoAnalista/Teste2/bin/Debug/net8.0/Teste2.pdb
+/home/renanmoraes/projects/supero/AvaliacaoAnalista/Teste2/obj/Debug/net8.0/Teste2.GeneratedMSBuildEditorConfig.editorconfig
+/home/renanmoraes/projects/supero/AvaliacaoAnalista/Teste2/obj/Debug/net8.0/Teste2.AssemblyInfoInputs.cache
+/home/renanmoraes/projects/supero/AvaliacaoAnalista/Teste2/obj/Debug/net8.0/Teste2.AssemblyInfo.cs
+/home/renanmoraes/projects/supero/AvaliacaoAnalista/Teste2/obj/Debug/net8.0/Teste2.csproj.CoreCompileInputs.cache
+/home/renanmoraes/projects/supero/AvaliacaoAnalista/Teste2/obj/Debug/net8.0/Teste2.sourcelink.json
+/home/renanmoraes/projects/supero/AvaliacaoAnalista/Teste2/obj/Debug/net8.0/Teste2.dll
+/home/renanmoraes/projects/supero/AvaliacaoAnalista/Teste2/obj/Debug/net8.0/refint/Teste2.dll
+/home/renanmoraes/projects/supero/AvaliacaoAnalista/Teste2/obj/Debug/net8.0/Teste2.pdb
+/home/renanmoraes/projects/supero/AvaliacaoAnalista/Teste2/obj/Debug/net8.0/Teste2.genruntimeconfig.cache
+/home/renanmoraes/projects/supero/AvaliacaoAnalista/Teste2/obj/Debug/net8.0/ref/Teste2.dll
