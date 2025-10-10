@@ -5,13 +5,41 @@
     Exemplo: AAABCCDDD -> Retorno : ABCD
  */
 
+using Teste1.Controllers;
+using Teste1.Services;
+using Teste1.Views;
+
 namespace Teste1
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Boa sorte!");
+            try
+            {
+                // Configuração de dependências (Dependency Injection manual)
+                var view = new ConsoleView();
+                var validationService = new InputValidationService();
+                var deduplicationService = new StringDeduplicationService();
+
+                // Inicialização do controller
+                var controller = new StringProcessController(
+                    view,
+                    validationService,
+                    deduplicationService
+                );
+
+                // Execução da aplicação
+                controller.Run();
+            }
+            catch (Exception ex)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"\n❌ Erro fatal: {ex.Message}");
+                Console.ResetColor();
+                Console.WriteLine("\nPressione qualquer tecla para sair...");
+                Console.ReadKey();
+            }
         }
     }
 }
