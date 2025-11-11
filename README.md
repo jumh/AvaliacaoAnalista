@@ -190,6 +190,18 @@ aplicando automaticamente no cluster as configurações versionadas no repositó
 19. Descreva detalhadamente algum case de sucesso em que você atuou diretamente no desenvolvimento para solução de algum problema, cite tecnologias e os desafios enfrentados.
 
 **Resposta:**
-Caso de sucesso no projeto MES cilindros - CSN projeto legado e de alta resolvemos 4 novas telas seguindo o padrão do projeto tecnologias utilizadas C# WEBFORMS,  arquitetura SOAP com comunicação por barramento que inclusive rendeu uma parabenização ao time no linkdn, como eu sempre passei status report e sempre tinha entendimento do que estava ocorrendo no projeto fui convidado a assumir  a posição de lider técnico no projeto documental um projeto
+Meu maior desafio foi no projeto atual de gestão financeira e comunicação com a homologadora, pois envolveu um contexto totalmente novo — tanto em regras de negócio quanto em tecnologias e arquitetura.
+O desafio principal foi migrar completamente de linguagem, paradigma e estilo de desenvolvimento, adotando uma comunicação via túnel e a geração de mensagens XML utilizando uma mensageria síncrona própria da homologadora.
+Além disso, foi necessário implementar o registro das transações em um serviço de histórico baseado em blockchain (Corda R3).
+Para isso, precisei desenvolver um serviço em Java, responsável por registrar e autorizar as transações nesse ambiente distribuído.
+
+Diferente de uma API REST, que trabalha com requisições HTTP tradicionais para troca de dados entre cliente e servidor, o Corda R3 é uma plataforma de blockchain voltada para o registro e validação de transações entre múltiplas partes, sem depender de um servidor central.
+
+Enquanto uma API REST apenas transmite e processa informações, o Corda mantém um ledger distribuído, onde cada transação é assinada, verificada e imutável, garantindo segurança, rastreabilidade e consenso entre participantes.
+
+Em resumo, a API REST é usada para comunicação tradicional entre sistemas, enquanto o Corda R3 é utilizado para registrar e validar transações de forma descentralizada, com integridade e confiança entre diferentes entidades.
+
+
+Observação: Peço desculpas por eventuais erros de ortografia. As respostas foram elaboradas em momentos de ociosidade durante o trabalho atual, o que pode ter limitado o tempo de revisão
 
 
