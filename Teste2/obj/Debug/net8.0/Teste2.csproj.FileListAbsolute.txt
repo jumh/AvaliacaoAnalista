@@ -1,0 +1,15 @@
+C:\Users\fisch\AvaliacaoAnalista\Teste2\bin\Debug\net8.0\Teste2.exe
+C:\Users\fisch\AvaliacaoAnalista\Teste2\bin\Debug\net8.0\Teste2.deps.json
+C:\Users\fisch\AvaliacaoAnalista\Teste2\bin\Debug\net8.0\Teste2.runtimeconfig.json
+C:\Users\fisch\AvaliacaoAnalista\Teste2\bin\Debug\net8.0\Teste2.dll
+C:\Users\fisch\AvaliacaoAnalista\Teste2\bin\Debug\net8.0\Teste2.pdb
+C:\Users\fisch\AvaliacaoAnalista\Teste2\obj\Debug\net8.0\Teste2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fisch\AvaliacaoAnalista\Teste2\obj\Debug\net8.0\Teste2.AssemblyInfoInputs.cache
+C:\Users\fisch\AvaliacaoAnalista\Teste2\obj\Debug\net8.0\Teste2.AssemblyInfo.cs
+C:\Users\fisch\AvaliacaoAnalista\Teste2\obj\Debug\net8.0\Teste2.csproj.CoreCompileInputs.cache
+C:\Users\fisch\AvaliacaoAnalista\Teste2\obj\Debug\net8.0\Teste2.sourcelink.json
+C:\Users\fisch\AvaliacaoAnalista\Teste2\obj\Debug\net8.0\Teste2.dll
+C:\Users\fisch\AvaliacaoAnalista\Teste2\obj\Debug\net8.0\refint\Teste2.dll
+C:\Users\fisch\AvaliacaoAnalista\Teste2\obj\Debug\net8.0\Teste2.pdb
+C:\Users\fisch\AvaliacaoAnalista\Teste2\obj\Debug\net8.0\Teste2.genruntimeconfig.cache
+C:\Users\fisch\AvaliacaoAnalista\Teste2\obj\Debug\net8.0\ref\Teste2.dll
