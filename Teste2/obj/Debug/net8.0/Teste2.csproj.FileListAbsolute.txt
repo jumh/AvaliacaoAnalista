@@ -1,0 +1,14 @@
+C:\Users\Guilherme\Downloads\AvaliacaoAnalista-main\AvaliacaoAnalista-main\Teste2\bin\Debug\net8.0\Teste2.exe
+C:\Users\Guilherme\Downloads\AvaliacaoAnalista-main\AvaliacaoAnalista-main\Teste2\bin\Debug\net8.0\Teste2.deps.json
+C:\Users\Guilherme\Downloads\AvaliacaoAnalista-main\AvaliacaoAnalista-main\Teste2\bin\Debug\net8.0\Teste2.runtimeconfig.json
+C:\Users\Guilherme\Downloads\AvaliacaoAnalista-main\AvaliacaoAnalista-main\Teste2\bin\Debug\net8.0\Teste2.dll
+C:\Users\Guilherme\Downloads\AvaliacaoAnalista-main\AvaliacaoAnalista-main\Teste2\bin\Debug\net8.0\Teste2.pdb
+C:\Users\Guilherme\Downloads\AvaliacaoAnalista-main\AvaliacaoAnalista-main\Teste2\obj\Debug\net8.0\Teste2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Guilherme\Downloads\AvaliacaoAnalista-main\AvaliacaoAnalista-main\Teste2\obj\Debug\net8.0\Teste2.AssemblyInfoInputs.cache
+C:\Users\Guilherme\Downloads\AvaliacaoAnalista-main\AvaliacaoAnalista-main\Teste2\obj\Debug\net8.0\Teste2.AssemblyInfo.cs
+C:\Users\Guilherme\Downloads\AvaliacaoAnalista-main\AvaliacaoAnalista-main\Teste2\obj\Debug\net8.0\Teste2.csproj.CoreCompileInputs.cache
+C:\Users\Guilherme\Downloads\AvaliacaoAnalista-main\AvaliacaoAnalista-main\Teste2\obj\Debug\net8.0\Teste2.dll
+C:\Users\Guilherme\Downloads\AvaliacaoAnalista-main\AvaliacaoAnalista-main\Teste2\obj\Debug\net8.0\refint\Teste2.dll
+C:\Users\Guilherme\Downloads\AvaliacaoAnalista-main\AvaliacaoAnalista-main\Teste2\obj\Debug\net8.0\Teste2.pdb
+C:\Users\Guilherme\Downloads\AvaliacaoAnalista-main\AvaliacaoAnalista-main\Teste2\obj\Debug\net8.0\Teste2.genruntimeconfig.cache
+C:\Users\Guilherme\Downloads\AvaliacaoAnalista-main\AvaliacaoAnalista-main\Teste2\obj\Debug\net8.0\ref\Teste2.dll
