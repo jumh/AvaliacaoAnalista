@@ -7,11 +7,67 @@
 
 namespace Teste1
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Boa sorte!");
+            var input = GetAlphanumericStringFromUser();
+
+            var result = RemoveAdjacentDuplicates(input);
+
+            Console.WriteLine($"\nResultado após remover duplicados próximos: {result}");
+        }
+
+        static string GetAlphanumericStringFromUser()
+        {
+            while (true)
+            {
+                Console.Write("Digite uma string alfanumérica: ");
+                
+                var input = Console.ReadLine()?.Trim();
+
+                if (!string.IsNullOrEmpty(input) && IsAlphanumeric(input))
+                    return input;
+                
+                Console.WriteLine("Entrada inválida. Por favor, digite uma string alfanumérica.");
+            }
+        }
+
+        static bool IsAlphanumeric(string input)
+        {
+            foreach (char c in input)
+            {
+                if (!char.IsLetterOrDigit(c))
+                    return false;
+            }
+            return true;
+        }
+
+
+        static string RemoveAdjacentDuplicates(string input)
+        {
+            if (string.IsNullOrEmpty(input))
+                return input;
+
+            var result = new System.Text.StringBuilder();
+            
+            char previousChar = input[0];
+            
+            result.Append(previousChar);
+            
+            for (int i = 1; i < input.Length; i++)
+            {
+                char currentChar = input[i];
+            
+                if (currentChar != previousChar)
+                {
+                    result.Append(currentChar);
+                
+                    previousChar = currentChar;
+                }
+            }
+            
+            return result.ToString();
         }
     }
 }
