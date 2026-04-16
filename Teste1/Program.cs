@@ -9,9 +9,33 @@ namespace Teste1
 {
     internal class Program
     {
+        static string RemoverDuplicadosProximos(String entrada)
+        {
+            if (String.IsNullOrEmpty(entrada))
+            {
+                return "";
+            }
+
+            var entradaList = entrada.ToCharArray();
+            entrada = "";
+
+            foreach (var caractere in entradaList)
+            {
+                if (!entrada.EndsWith(caractere.ToString()))
+                {
+                    entrada += caractere;
+                }
+            }
+
+            return entrada;
+        }
         static void Main(string[] args)
         {
-            Console.WriteLine("Boa sorte!");
+            Console.Write("Digite uma string alfanumérica: ");
+            String entrada = Console.ReadLine() ?? "";
+            entrada = RemoverDuplicadosProximos(entrada);
+
+            Console.WriteLine("Retorno: " + entrada);
         }
     }
 }
