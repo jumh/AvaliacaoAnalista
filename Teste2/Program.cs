@@ -10,9 +10,49 @@ namespace Teste2
 {
     internal class Program
     {
+        static string GerarFibonacci(int repeticoes)
+        {
+            string sequencia = "";
+            int anterior = 1;
+            int atual = 1;
+
+            for (int i = 0; i < repeticoes; i++)
+            {
+                if (i == 0 || i == 1)
+                {
+                    sequencia += "1";
+                }
+                else
+                {
+                    int proximo = anterior + atual;
+                    sequencia += proximo;
+                    anterior = atual;
+                    atual = proximo;
+                }
+
+                if (i < repeticoes - 1)
+                {
+                    sequencia += ",";
+                }
+            }
+
+            return sequencia;
+        }
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Boa sorte!");
+            int numero;
+            string entrada;
+
+            do
+            {
+                Console.Write("Digite um número inteiro entre 1 e 19: ");
+                entrada = Console.ReadLine() ?? "";
+            }
+            while (!Int32.TryParse(entrada, out numero) || numero <= 0 || numero >= 20);
+
+            string fibonacci = GerarFibonacci(numero);
+            Console.WriteLine("Sequência: " + fibonacci);
         }
     }
 }
