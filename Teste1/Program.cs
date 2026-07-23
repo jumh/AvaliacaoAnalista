@@ -11,7 +11,23 @@ namespace Teste1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Boa sorte!");
+            /*logica
+            - Olhar cada caractere da entrada
+            - Se o caractere lido for igual ao último que já foi colocado no resultado -> ignorar
+            - Se for diferente -> adicionar
+            */
+
+            // Pede a entrada do usuário
+            Console.Write("Digite uma string alfanumérica: ");
+            string entrada = Console.ReadLine() ?? "";
+
+            string resultado = "";
+            foreach(char c in entrada) {
+                if (resultado.Length == 0 || resultado[resultado.Length - 1] != c) {
+                    resultado += c;
+                }
+            }
+            Console.WriteLine("Retorno: " + resultado);
         }
     }
 }
