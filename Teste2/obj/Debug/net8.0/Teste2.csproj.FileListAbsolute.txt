@@ -1,0 +1,15 @@
+/home/gusteno/Área de trabalho/TesteBTP/AvaliacaoAnalista/Teste2/bin/Debug/net8.0/Teste2
+/home/gusteno/Área de trabalho/TesteBTP/AvaliacaoAnalista/Teste2/bin/Debug/net8.0/Teste2.deps.json
+/home/gusteno/Área de trabalho/TesteBTP/AvaliacaoAnalista/Teste2/bin/Debug/net8.0/Teste2.runtimeconfig.json
+/home/gusteno/Área de trabalho/TesteBTP/AvaliacaoAnalista/Teste2/bin/Debug/net8.0/Teste2.dll
+/home/gusteno/Área de trabalho/TesteBTP/AvaliacaoAnalista/Teste2/bin/Debug/net8.0/Teste2.pdb
+/home/gusteno/Área de trabalho/TesteBTP/AvaliacaoAnalista/Teste2/obj/Debug/net8.0/Teste2.GeneratedMSBuildEditorConfig.editorconfig
+/home/gusteno/Área de trabalho/TesteBTP/AvaliacaoAnalista/Teste2/obj/Debug/net8.0/Teste2.AssemblyInfoInputs.cache
+/home/gusteno/Área de trabalho/TesteBTP/AvaliacaoAnalista/Teste2/obj/Debug/net8.0/Teste2.AssemblyInfo.cs
+/home/gusteno/Área de trabalho/TesteBTP/AvaliacaoAnalista/Teste2/obj/Debug/net8.0/Teste2.csproj.CoreCompileInputs.cache
+/home/gusteno/Área de trabalho/TesteBTP/AvaliacaoAnalista/Teste2/obj/Debug/net8.0/Teste2.sourcelink.json
+/home/gusteno/Área de trabalho/TesteBTP/AvaliacaoAnalista/Teste2/obj/Debug/net8.0/Teste2.dll
+/home/gusteno/Área de trabalho/TesteBTP/AvaliacaoAnalista/Teste2/obj/Debug/net8.0/refint/Teste2.dll
+/home/gusteno/Área de trabalho/TesteBTP/AvaliacaoAnalista/Teste2/obj/Debug/net8.0/Teste2.pdb
+/home/gusteno/Área de trabalho/TesteBTP/AvaliacaoAnalista/Teste2/obj/Debug/net8.0/Teste2.genruntimeconfig.cache
+/home/gusteno/Área de trabalho/TesteBTP/AvaliacaoAnalista/Teste2/obj/Debug/net8.0/ref/Teste2.dll
