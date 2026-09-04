@@ -1,0 +1,69 @@
+1. Cite 6 fatores do Twelve-Factor App e explique cada um deles.
+Responda: 
+1. Base do código: um git para controle de versões que podem ser gerados deploys 
+2. Dependências: dependências são declaradas explicitamente em arquivos de gerenciadores de pacotes (package.json, requirements.txt) 
+3. Configurações: configurações ficam no ambiente através de variáveis de ambiente e dados sensíveis nunca ficam no código fonte.
+4. Serviço de apoio: Bancos de dados, filas de mensagens e cache são tratados como recursos externos conectados.
+A aplicação acessa esses serviços por meio de URLs ou identificadores configuráveis, sem acoplamento direto.
+5. Construa, lance, execute: 
+Build: construção do container 
+Release: associação do build em configurações especificas
+Run: execução do processo em produção
+6.A aplicação roda como processos stateless, sem armazenar estado local.
+
+2. Quais são as principais camadas no desenvolvimento de um software?
+Responda: Frontend, Backend, Banco de dados, APIs, Infraestrutura
+
+3.Diferencie Arquitetura SOA X Arquitetura microserviços.
+Resposta: SOA tem foco em múltiplos sistemas, já microserviços tem foco em aplicação individual em partes menores
+
+4. Qual é o objetivo de um API Management na arquitetura de serviços distribuídos? Cite vantagens e desvantagens.
+Resposta: Tem o objetivo de centralizar o controle, segurança, publicação e monitoramento de APIs
+Vantagens: Controla quem pode acessar os dados, define limites de uso.
+
+5. Qual a diferença entre uma Struct e uma Class?
+Resposta:
+Struct sempre que for passado para outra variável será um valor novo.
+Class sempre terá o mesmo valor por ser uma referência.
+
+6. Explique a grande diferença entre .NET e .NET CORE.
+Resposta: .NET CORE é a versão mais atual que funciona em Windows, Linux e Mac
+.NET roda somente em Windows 
+
+7.Quais as principais diferenças entre REST e GRPC?
+Resposta: As principais diferenças são de formato de dados, forma como a comunicação é estruturada, e o protocolo de transporte.
+
+8.Explique como funciona um gerenciamento de rotas de uma SPA.
+Resposta: Funciona como um atalho entre o usuário e o servidor, em vez de carregar a pagina inteira atualiza somente o que mudou na tela 
+
+9.Falando sobre DevOps, comente o que conhece sobre.
+Resposta: São práticas para entregar softwares de forma mais rápida e segura.
+
+10. Explique sobre um método agile.
+Resposta: O Scrum, um método muito ágil e popular que organiza o trabalho em ciclos curtos de tempo chamados sprints.
+
+11. CI cada mudança no código é testada e validada automaticamente. CD Implantação contínua, que automatiza o deploy em diferentes ambientes, ferramentas usadas no dia a dia GIT, Docker.
+
+12.Qual a diferença entre Docker e Containers.
+Resposta: Docker é a plataforma, enquanto os containers são a tecnologia de virtualização.
+
+13.Qual a diferença entre Kubernetes e Openshift?
+Resposta: Kubernetes é um sistema feito para organizar e gerenciar contêiners, o Openshift usa o kubernetes como base e adiciona algumas ferramentas prontas para empresas.
+
+14. Quais as vantagens e desvantagens sobre API e quais preocupações devemos ter quando escolhemos essa abordagem?
+Resposta: APIs trazem como vantagens integração, escalabilidade e inovação, mas como desvantagem dependência de terceiros, custos e riscos de segurança, a maior preocupação é segurança e confiabilidade, devem ser avaliadas antes da integração.
+
+15. Como conseguimos garantir um nível de segurança satisfatório no uso de APIS?
+Resposta: Usar autenticação forte, criptografia, limitar acessos.
+
+16.Para que serve uma arquitetura de mensagerias?
+Resposta: Permitir que diferentes sistemas, aplicativos ou microserviços se comuniquem e compartilhem dados.
+
+17. Explique a estratégia SAGA em arquitetura de microservice.
+Resposta: É um padrão de design usado para gerenciar a consistência de dados.
+
+18.Descreva o seu entendimento sobre GitOps utilizando Kubernetes.
+Resposta: Uso do git como fonte única para gerenciar e configurar o cluster
+
+19.Descreva detalhadamente algum case de sucesso em que você atuou diretamente no desenvolvimento para solução de algum problema, cite tecnologias e os desafios enfrentados.
+Resposta: Ferramenta que uso diariamente para solução de problemas é o N8N, faço automações com inteligência artificial para identificação de erros, para atendimento, monitoramento. Uma solução que fiz recentemente foi pegar ATAS de reuniões de horas, passarem pela ferramenta e saírem resumidas e com fácil leitura para quem não esteve na reunião ou mesmo quem esteve. Com integração é enviado para o email dos que participaram e mesmo para um armazenamento como Notion.
