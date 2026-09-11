@@ -11,7 +11,21 @@ namespace Teste1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Boa sorte!");
+            Console.WriteLine("Removedor de caracteres duplicados consecutivos");
+
+            Console.Write("Digite o texto que deve ser corrigido: ");
+            string text = Console.ReadLine() ?? throw new Exception("Texto não pode ser nulo");
+
+            string newText = "";
+
+            char? lastCharacter = null;
+            foreach(char character in text) {
+                if(character != lastCharacter) {
+                    newText += character;
+                }
+                lastCharacter = character;
+            }
+            Console.WriteLine("Texto corrigido: " + newText);
         }
     }
 }
