@@ -12,7 +12,26 @@ namespace Teste2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Boa sorte!");
+            Console.WriteLine("Gerador de sequência Fibonacci");
+            Console.WriteLine("Quantos números da sequência devem ser gerados? (Máx. 19)");
+
+            if(!int.TryParse(Console.ReadLine(), out int limit)) throw new Exception("O valor precisa ser um número inteiro");
+            if(limit <= 0 || limit >= 20) throw new Exception("O valor precisa estar entre 1 e 19");
+
+            Console.WriteLine("\nGerando sequência: ");
+            foreach(int value in FibonacciGenerator().Take(limit)) {
+                Console.WriteLine(value);
+            }
+
+        }
+
+        static IEnumerable<int> FibonacciGenerator()
+        {
+            int[] lastInts = [0, 1];
+            while (true) {
+                yield return lastInts[1];
+                (lastInts[0], lastInts[1]) = (lastInts[1], lastInts[0] + lastInts[1]);
+            }
         }
     }
 }
