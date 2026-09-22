@@ -11,7 +11,17 @@ namespace Teste1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Boa sorte!");
+            Console.WriteLine("Digite sequencia alfanumérica: ");
+
+            var sequencia = Console.ReadLine();
+
+            var resultado = sequencia.ToCharArray().Distinct().ToList();
+
+            foreach (var item in resultado)
+            {
+                Console.WriteLine($"O valor da sequencia alfanumérica é: {item}");
+            }
+
         }
     }
 }
